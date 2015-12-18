@@ -14,6 +14,23 @@ let bind fn = function
 
 let map fn = bind (fn >> Choice1Of2)
 
-let apply 
+let apply fn x =
+    match fn, x with
+    | Choice1Of2 fn, Choice1Of2 x -> Choice1Of2 (fn x)
+    | Choice1Of2 fn, Choice2Of2 error -> Choice2Of2 error
+    | Choice2Of2 error, Choice1Of2 x -> Choice2Of2 error
+    | Choice2Of2 error1, Choice2Of2 error2 -> Choice2Of2 (error1 + "\r\n" + error2)
 
-let sequence 
+let traverseA f list =
+    let (<*>) = apply
+    let retn = Choice1Of2
+
+    let cons head tail = head :: tail
+
+    let initState = retn []
+    let folder head tail = 
+        retn cons <*> (f head) <*> tail
+
+    List.foldBack folder list initState
+
+let sequenceA list = traverseA id list

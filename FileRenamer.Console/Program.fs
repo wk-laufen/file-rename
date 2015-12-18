@@ -25,16 +25,19 @@ let rename() =
         |> Choice.bind (fun indexFile ->
             FileRenamer.Core.BatchRename.renameFiles dir indexFile (fun source target -> ())
         )
+        |> Choice.map (fun _ -> dir)
     )
 
 let log =
     let continuation s =
-        let dir = System.Reflection.Assembly.GetExecutingAssembly().Location
+        let dir =
+            System.Reflection.Assembly.GetExecutingAssembly().Location
+            |> Path.GetDirectoryName
         File.AppendAllLines(Path.Combine(dir, "log.txt"), [|s|])
     Printf.ksprintf continuation
 
 [<EntryPoint>]
-let main argv = 
+let main argv =
     match rename() with
     | Choice1Of2 dir ->
         log "Successfully renamed files in %s" dir
