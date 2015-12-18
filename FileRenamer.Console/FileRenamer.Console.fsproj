@@ -51,6 +51,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
+    <None Include="create-test-folder.fsx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FileRenamer.Core\FileRenamer.Core.fsproj">
