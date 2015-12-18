@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FileRenamer.Console", "FileRenamer.Console\FileRenamer.Console.fsproj", "{F90FF69F-C16F-49B6-8715-2FA6F90DC9B5}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FileRenamer.Core", "FileRenamer.Core\FileRenamer.Core.fsproj", "{BA51496C-ECAA-441B-BC8A-C8FEA71F25E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F90FF69F-C16F-49B6-8715-2FA6F90DC9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90FF69F-C16F-49B6-8715-2FA6F90DC9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90FF69F-C16F-49B6-8715-2FA6F90DC9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90FF69F-C16F-49B6-8715-2FA6F90DC9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA51496C-ECAA-441B-BC8A-C8FEA71F25E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA51496C-ECAA-441B-BC8A-C8FEA71F25E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA51496C-ECAA-441B-BC8A-C8FEA71F25E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA51496C-ECAA-441B-BC8A-C8FEA71F25E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
