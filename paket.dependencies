@@ -1,4 +1,3 @@
 source https://nuget.org/api/v2
 
-nuget FSharp.ViewModule.Core
-nuget FsXaml.Wpf
+nuget FSharp.Core
