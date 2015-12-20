@@ -1,6 +1,6 @@
 ﻿open System.IO
 
-let dir = @"C:\Users\Hannes\Workspace\wklaufen\file-rename\test"
+let dir = Path.Combine(__SOURCE_DIRECTORY__, "test")
 let indexFilePath = Path.Combine(dir, "index.txt")
 
 try
